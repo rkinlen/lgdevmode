@@ -2,12 +2,13 @@ name: Daily URL Request
 
 on:
   schedule:
-    # Runs at 19:17 UTC every day (which is 20:17 in the UK during BST)
+    # Runs at 19:17 UTC every day
     - cron: '17 19 * * *'
 
 jobs:
   send_request:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -23,4 +24,5 @@ jobs:
           pip install requests
 
       - name: Run request script
-        run: python request_script.py
+        run: |
+          python request_script.py
