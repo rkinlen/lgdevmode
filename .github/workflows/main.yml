@@ -3,7 +3,7 @@ name: Daily URL Request
 on:
   schedule:
     # Runs at 19:04 UTC every day (which is 20:04 in the UK during BST)
-    - cron: '4 19 * * *'
+    - cron: '4 25 * * *'
 
 jobs:
   send_request:
