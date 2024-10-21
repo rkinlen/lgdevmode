@@ -1,0 +1,1 @@
+lgdev mode enabelr
